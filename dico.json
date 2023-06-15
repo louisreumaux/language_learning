@@ -183,7 +183,7 @@
   "Rendez-vous": "encontro",
   "qu'est-ce qui se passe ?": "o que está acontecendo ?",
   "Ça dépend": "depende",
-  "Je suis d'accord": "estou de acordo",
+  "Je suis d'accord": ["estou de acordo", "concordo"],
   "Je me sens bien": "estou me sentindo bem",
   "Je me sens mal": "estou me sentindo mal",
   "prendre des photos":"tirar fotos",

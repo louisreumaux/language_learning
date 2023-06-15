@@ -10,6 +10,8 @@ from tkinter import *
 
 import random
 
+import os
+
 
 
 def uniformisation_proba(dico_voc, probability_distribution):
@@ -33,8 +35,18 @@ def reinit_proba(dico_voc, path_proba_distribution):
 
 def session_traduction(langue="esp", nb_mot_a_traduire=50, proba_reinit = False):
 
-    path_dico_voc = r"C:\Users\louis.reumaux\Documents\ptg\dico.json"
-    path_proba_distribution = r"C:\Users\louis.reumaux\Documents\ptg\probability_distribution_por.npy"
+    # Chemin absolu du script Python
+    script_path = os.path.abspath(__file__)
+
+    # Dossier parent du script Python
+    folder_path = os.path.dirname(script_path)
+
+    # Utilisation du chemin du dossier
+    path_dico_voc = os.path.join(folder_path, 'dico.json')
+    path_proba_distribution = os.path.join(folder_path, 'probability_distribution_por.npy')
+
+    #path_dico_voc = r"C:\Users\louis.reumaux\Documents\language_learning\dico.json"
+    #path_proba_distribution = r"C:\Users\louis.reumaux\Documents\language_learning\probability_distribution_por.npy"
     dico_voc = json.load(open(
         path_dico_voc, "r", encoding='utf-8'))
     probability_distribution = np.load(
